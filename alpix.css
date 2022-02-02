@@ -1,22 +1,22 @@
 body{opacity:0}
 @font-face {
     font-family: 'Gothan';
-    src: url(http://127.0.0.1:5500/Gotham-Rounded-Book.woff);
+    src: url(https://cdn.jsdelivr.net/gh/alpix-dev/dooca_kombination/Gotham-Rounded-Book.woff);
 }
 @font-face {
   font-family: 'Gothan';
   font-weight:600;
-  src: url(http://127.0.0.1:5500/GothamRoundedMedium.woff);
+  src: url(https://cdn.jsdelivr.net/gh/alpix-dev/dooca_kombination/GothamRoundedMedium.woff);
 }
 @font-face {
   font-family: 'Gothan';
   font-weight:300;
-  src: url(http://127.0.0.1:5500/GothamRoundedLight.woff);
+  src: url(https://cdn.jsdelivr.net/gh/alpix-dev/dooca_kombination/GothamRoundedLight.woff);
 }
 @font-face {
   font-family: 'Gothan';
   font-weight:700;
-  src: url(http://127.0.0.1:5500/GothamRoundedBold.woff);
+  src: url(https://cdn.jsdelivr.net/gh/alpix-dev/dooca_kombination/GothamRoundedBold.woff);
 }
 :root{
   --m-ff: 'Gothan', sans-serif;
