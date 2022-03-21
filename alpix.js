@@ -47,16 +47,17 @@ let audio = '<audio id="player" controls=""><source id="source" src="https://ser
 if(window.innerWidth > 990){
     $('<div id="k_radio" class="ml-3 mr-5 d-none d-md-flex align-items-center"><span>Ouça a Rádio Kombination Online</span><div id="iframe-cover"><i class="cursor"></i><i class="player"></i>' + audio +'</div></div>').insertBefore($('header .smart-search.modal-s').closest('.ml-3'));
 }else{
-    $('<div id="k_radio" class="ml-3 mr-5 d-md-flex align-items-center"><span>Ouça a Rádio Kombination Online</span><div id="iframe-cover"><i class="cursor"></i><i class="player"></i>' + audio +'</div></div>').insertBefore('header.header-3');
+    $('<div id="k_radio" class="ml-3 mr-5 d-md-flex align-items-center"><span>Ouça a Rádio Kombination Online</span><div id="iframe-cover"><i class="cursor"></i><i class="player"></i>' + audio +'</div></div><div class="k_divider"/>').insertBefore('header.header-3');
 }
 $('#iframe-cover .cursor').click(function(){
-    $(this).closest('#iframe-cover').toggleClass('play');
     let player = document.getElementById('player')
-    if($('#iframe-cover').hasClass('play')){
+    if(!$('#iframe-cover').hasClass('play')){
         player.play();
+        $(this).closest('#iframe-cover').addClass('play');
         sessionStorage.setItem('radio_play','1');
     }else{
         player.pause();
+        $(this).closest('#iframe-cover').removeClass('play');
         sessionStorage.setItem('radio_play','0');
     }
     
