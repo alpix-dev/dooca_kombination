@@ -275,13 +275,13 @@ body{opacity:0}
 
 #k_radio #iframe-cover{position:relative;}
 #k_radio #iframe-cover > .cursor{
-  background: #feeb00;
+  background: #023577;
   height: 32px;
   width: 32px;
   position: absolute;
   border-radius: 50%;
   z-index:2;
-  pointer-events:none
+  pointer-events:all
 }
 #k_radio #iframe-cover > .cursor:before{
   content: "";
@@ -462,4 +462,66 @@ body:not(.page--index) .footer-newsletter{display:none}
 .collection-sidebar .sidebar-block__header .close:after{
   height:18px;
   width:1px
+}
+
+/* RADIO MOBILE */
+#k_radio iframe{
+  width: 30px;
+  margin-right: 35px;
+  opacity: 1;
+  z-index: 2;
+  position: relative;
+}
+@media(max-width:990px){
+  #k_radio{
+    margin: 1rem 2rem!important;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+  }
+  #k_radio > span{
+    font-size: 10px;
+    width: 170px;
+    text-align: left;
+  }
+  #k_radio #iframe-cover{
+    width: 70px;
+    margin: 0 20px -5px 10px;
+    text-align:left
+  }
+  .header-3{border-top:1px solid #023475}
+
+  
+}
+#k_radio #iframe-cover {
+  position: relative;
+  width: 70px;
+  height: 36px;
+}
+/* #iframe-cover{overflow:hidden;width:65px} */
+audio{
+  height: 36px;
+  width: 100px;
+  pointer-events: none;
+  opacity: 0;
+  margin: -2px -40px 0 -9px;
+  display:none
+}
+
+#aviso-radio{
+  background: #003279;
+  color: #fff;
+  bottom: 30px;
+  position: fixed;
+  right: 30px;
+  width: 315px;
+  font-size: 12px;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 30px;
+  box-shadow: 0px 0px 10px rgb(0 0 0 / 50%);
+  z-index:999;
+  cursor:pointer
 }
