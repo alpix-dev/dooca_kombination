@@ -49,23 +49,25 @@ if(window.innerWidth > 990){
 }else{
     $('<div id="k_radio" class="ml-3 mr-5 d-md-flex align-items-center"><span>Ouça a Rádio Kombination Online</span><div id="iframe-cover"><i class="cursor"></i><i class="player"></i>' + audio +'</div></div><div class="k_divider"/>').insertBefore('header.header-3');
 }
-$('#iframe-cover .cursor').click(function(){
-    let player = document.getElementById('player')
+const player = document.getElementById('player');
+$('#iframe-cover .cursor').click(function(){    
+    //console.log('a');
     if(!$('#iframe-cover').hasClass('play')){
+        //console.log('b');
         player.play();
         $(this).closest('#iframe-cover').addClass('play');
         sessionStorage.setItem('radio_play','1');
     }else{
+        //console.log('c');
         player.pause();
+        //player.currentTime = 0;
         $(this).closest('#iframe-cover').removeClass('play');
         sessionStorage.setItem('radio_play','0');
     }
-    
-
 });
 $(document).ready(function(){    
     if(sessionStorage.getItem('radio_play') == "1"){        
-        let player = document.getElementById('player');
+//        let player = document.getElementById('player');
         
         let autoplay = player.play();
         if(autoplay !== undefined){
@@ -80,8 +82,8 @@ $(document).ready(function(){
     }
 });
 $('body').click(function(){
-    let player = document.getElementById('player');
-    player.play();
+    //let player = document.getElementById('player');
+    //player.play();
     if(sessionStorage.getItem('radio_play') == "1"){
         if(!$('#iframe-cover').hasClass('play')){
             $('#iframe-cover').addClass('play');
